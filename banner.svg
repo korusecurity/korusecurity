@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2ea043"/>
+      <stop offset="1" stop-color="#3fb950"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.15" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#2ea043" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#2ea043" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="320" fill="url(#bg)"/>
+  <rect width="1280" height="320" fill="url(#glow)"/>
+  <!-- decoy / honeytoken motif: a few faint nodes + a trace line -->
+  <g stroke="#30363d" stroke-width="1.5" fill="none" opacity="0.7">
+    <path d="M120 250 C 220 150, 320 180, 420 120 S 640 90, 760 150"/>
+    <path d="M760 150 C 860 200, 980 190, 1160 240"/>
+  </g>
+  <g fill="#2ea043">
+    <circle cx="120" cy="250" r="5"/>
+    <circle cx="420" cy="120" r="5"/>
+    <circle cx="760" cy="150" r="5"/>
+    <circle cx="1160" cy="240" r="5"/>
+  </g>
+  <g fill="#30363d" opacity="0.8">
+    <circle cx="260" cy="210" r="3"/>
+    <circle cx="620" cy="118" r="3"/>
+    <circle cx="980" cy="192" r="3"/>
+  </g>
+  <!-- title -->
+  <text x="80" y="150" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="82" font-weight="700" fill="#e6edf3" letter-spacing="-1">Koru</text>
+  <rect x="80" y="172" width="120" height="6" rx="3" fill="url(#accent)"/>
+  <text x="80" y="228" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#8b949e" font-weight="500">Deception-first runtime defense for the AI era</text>
+  <text x="80" y="270" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="19" fill="#2ea043" font-weight="600">honeytokens · eBPF · process lineage</text>
+</svg>
