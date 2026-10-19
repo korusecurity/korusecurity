@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="banner.svg" alt="Koru — deception-first runtime defense for the AI era" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="koru-logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="koru-logo-light.svg">
+    <img src="koru-logo-light.svg" alt="Koru" width="360">
+  </picture>
 </p>
 
-<h1 align="center">Koru</h1>
-
-<p align="center">
-  <strong>Deception-first runtime defense for the AI era.</strong><br>
-  Catch AI attack agents and hijacked agents when they touch credentials — <em>before</em> the credential is used.
-</p>
+<h3 align="center"><strong>Deception-first runtime defense for the AI era.</strong></h3>
+<p align="center">Catch AI attack agents and hijacked agents when they touch credentials — <em>before</em> the credential is used.</p>
 
 <p align="center">
   <a href="https://github.com/korusecurity/koru/actions/workflows/ci.yml"><img src="https://github.com/korusecurity/koru/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
@@ -22,6 +22,9 @@ Koru is an open-source, deception-based runtime security tool for Linux servers.
 AI-bait notes — and detects access to them **at the kernel level with eBPF**, before any
 credential is used. It then traces the accessing process lineage and reports whether the reader
 looks like a **human, an AI agent, or a possibly hijacked AI agent**.
+
+> AI agents can say anything. To read a file, they still have to call `open()`. Koru watches
+> that call — not the conversation.
 
 ## Why Koru
 
