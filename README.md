@@ -1,9 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="koru-logo-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="koru-logo-light.svg">
-    <img src="koru-logo-light.svg" alt="Koru" width="360">
-  </picture>
+  <img src="banner.png" alt="Koru — deception-first runtime defense for the AI era" width="100%">
 </p>
 
 <h3 align="center"><strong>Deception-first runtime defense for the AI era.</strong></h3>
