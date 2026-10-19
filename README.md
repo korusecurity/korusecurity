@@ -27,7 +27,8 @@ looks like a **human, an AI agent, or a possibly hijacked AI agent**.
 - **Access before use.** Alerts when a decoy file is *read* on the host — not when a fake key is
   used somewhere else. Kernel-level `open()` detection, sub-second.
 - **AI-agent attribution.** Process lineage tells apart a human, a coding agent (Claude Code,
-  Cursor, Codex), an MCP server chain, or a container.
+  Cursor, Codex), a personal-agent runtime (OpenClaw and the claw family — nanobot, ZeroClaw,
+  NanoClaw, IronClaw), an MCP server chain, or a container.
 - **Local-first and open.** Apache-2.0, no telemetry, no cloud dependency. Data stays on your box.
 
 ## Repositories
@@ -40,8 +41,19 @@ looks like a **human, an AI agent, or a possibly hijacked AI agent**.
 git clone https://github.com/korusecurity/koru.git
 cd koru
 cargo build --release
-sudo ./target/release/koru tuzak kur   # plant decoys
+TMP=$(mktemp -d); mkdir -p "$TMP/home"
+./target/release/koru decoy plant --package packages/decoys --root "$TMP/home" --state "$TMP/state"
 ```
+
+## Roadmap
+
+- **Now:** v0.1.0 — the Linux server sensor (eBPF) with signed binaries.
+- **First integrations:** OpenClaw and the claw family (nanobot, ZeroClaw, NanoClaw, IronClaw) —
+  agent signatures, a `~/.openclaw` decoy set and a ClawHub guard skill. Their defences act
+  before execution; Koru adds the missing runtime layer. Then coding-agent hooks, an editor
+  extension, a CI action and an MCP security proxy.
+- **Later:** desktop and web sensors on the same core; the decoy manifest and agent-actor
+  taxonomy published as an open specification.
 
 ## Security · Contributing · Contact
 
